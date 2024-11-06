@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+@import Url("https://fonts.googleapis.com/css2?familyRoboto+Condensed:wgth@200;300;400;500;600;700;800&display=swap");
+*{
+    font-family: "Roboto Condensed",sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2f3640;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(7, 7, 7);
+}
+.input-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #70e6f3;
+    border-radius:10px ;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-icon img{
+    height: 35%;
+    width:30% ;
+    margin-left: 68%;
+    cursor: pointer;
+    padding-top:4px ;
+}
+.cityInput{
+    flex:1;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding: 10px;
+}
+.image{
+    text-align: center;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.image img{
+    width: 160px;
+    height: 160px;
+    padding: 30px;
+
+}
+.temp,
+.location,
+.country{
+    margin-top: 5px;
+    font-size: 35px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+}
+.temp{
+    font-weight: 500;
+}
+.location{
+    color:#70e6f3;
+    font-weight: 400;
+    font-size: 40px;
+}
+.country{
+    font-size: 18px;
+    color: #888;
+    font-weight: 500;
+}
+.cord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight:bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #333;
+}
+.cord div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.humidity-percent,
+.wind-percent,
+.cord div span:nth-child(2){
+    font-size: 18px;
+    font-weight: bold;
+    color: #969494;
+    padding-top: 5px;
+}
+.data-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+.latlog{
+    padding-top: 30px;
+
+}
+.element{
+    text-align: center;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+}
+.text{
+    font-size: 12px;
+    color: #888;
+}
+.copyright{
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    padding-top: 30px;
+}
+.copyright span{
+    color: #333 ;
+    font-weight: bold;
+}
+.city-not-found,
+.loading-message,
+.error-message{
+    margin-top: 10px;
+    color: #888;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&display=swap");
+*{
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.app-container h1{
+    font-weight: 600;
+    font-size: 18px;
+    color: #3498db;
+    border-bottom: 1px solid #f1efef;
+    padding: 10 px 0px;
+}
+.app-container p{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.qr-code-image{
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(138, 137, 137);
+    margin-top: 30px;
+    
+}
+.input-label{
+    display: block;
+    margin-bottom: 8px;
+    color:#3498db;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+input[type="text"]{
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size:16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.footer{
+    margin-top: 30px;
+    color:#3498db;
+    font-style: bold;
 }
